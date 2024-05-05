@@ -12,7 +12,7 @@ dependencies = [
     "SQLAlchemy[asyncio]<2.1.0,>=2.0.0",
     "SQLAlchemy-Utils",
     "anyio>=3.0.0,<4",
-    "pydantic~=2.5.3",
+    "pydantic~=2.7.1",
     "tenacity~=8.0.1",
     "sqlapagination",
     "exceptiongroup",
@@ -95,7 +95,7 @@ order_by_type = false
 known_first_party = ["quart_sqlalchemy", "tests"]
 
 [tool.mypy]
-python_version = "3.7"
+python_version = "3.8"
 plugins = ["pydantic.mypy", "sqlalchemy.ext.mypy.plugin"]
 files = ["src/quart_sqlalchemy", "tests"]
 show_error_codes = true
