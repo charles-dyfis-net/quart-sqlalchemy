@@ -13,7 +13,7 @@ dependencies = [
     "SQLAlchemy-Utils",
     "anyio>=3.0.0,<4",
     "pydantic~=2.7.1",
-    "tenacity~=8.0.1",
+    "tenacity~=8.3.0",
     "sqlapagination",
     "exceptiongroup",
 ]
@@ -34,8 +34,9 @@ build-backend = "pdm.backend"
 [tool.pdm.dev-dependencies]
 dev = [
     "pytest>=7.4.3",
+    "pytest-asyncio~=0.23.6",
     # "pytest-asyncio~=0.20.3",
-    "pytest-asyncio @ https://github.com/joeblackwaslike/pytest-asyncio/releases/download/v0.20.4.dev42/pytest_asyncio-0.20.4.dev42-py3-none-any.whl",
+    # "pytest-asyncio @ https://github.com/joeblackwaslike/pytest-asyncio/releases/download/v0.20.4.dev42/pytest_asyncio-0.20.4.dev42-py3-none-any.whl",
     "pytest-mock>=3.12.0",
     "pytest-cov>=4.1.0",
     "coverage[toml]>=7.3.2",
@@ -61,7 +62,7 @@ excludes = [
 ]
 
 [tool.pytest.ini_options]
-addopts = "-rsx --tb=short --loop-scope session"
+addopts = "-rsx --tb=short"
 testpaths = ["tests"]
 filterwarnings = [
     "error",
@@ -73,7 +74,6 @@ filterwarnings = [
     "ignore:.*Field .* has conflict with protected namespace \"model_\".*:UserWarning",
 ]
 asyncio_mode = "auto"
-py311_task = true
 log_cli = true
 
 [tool.coverage.run]
