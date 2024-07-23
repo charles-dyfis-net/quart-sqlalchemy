@@ -12,7 +12,7 @@ dependencies = [
     "SQLAlchemy[asyncio]<2.1.0,>=2.0.0",
     "SQLAlchemy-Utils",
     "anyio~=4.4.0",
-    "pydantic~=2.7.1",
+    "pydantic~=2.8.2",
     "tenacity~=8.3.0",
     "sqlapagination",
     "exceptiongroup",
